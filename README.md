@@ -3,7 +3,9 @@ Messaging processes states by email
 
 ## Mail format:
 Subject: Done_Host:host_Name:name_PID:pid
-Body: abs_log_path
+
+Body: abs_log_path:abs_log_path
+
 Attachment: n_log_lines or full log from abs_log_path
 
 ## Write processes for monitoring to processes.json in the format [optional]:
@@ -42,6 +44,6 @@ python process_messenger.py
 -c  config_file_path
 -p  pid pid_2 pid_n
 -l  abs_log_path abs_log_path_2 abs_log_path_n
--n  name name_2 name_3
+-n  name name_2 name_n
 ```
 

@@ -20,7 +20,7 @@ Messaging processes states by email
 ```
 {
   "input": "processes.json", (file with processes, see above)
-  "ssh": "username@host" or null, (ssh tunnling, null - not use)
+  "ssh": "username@host" or "host" or null, (ssh tunnling, null - not use)
   "mailing_list": ["local-part@domain", "local-part_2@domain"],
   "n_log_lines": 10, (number of log last lines to email attachment)
   "full_log": false (attach full log to email if exists)

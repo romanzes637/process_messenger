@@ -3,5 +3,6 @@
   "ssh": "username@host",
   "mailing_list": ["local-part@domain"],
   "n_log_lines": 10,
-  "full_log": false
+  "full_log": false,
+  "sender": "local-part@domain"
 }

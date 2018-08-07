@@ -4,9 +4,9 @@ Messaging processes states by email
 ## Mail format:
 Subject: Done_Host:host_Name:name_PID:pid
 
-Body: abs_log_path:abs_log_path
+Body: abs_log_path:abs_log_path (see below)
 
-Attachment: n_log_lines or full log from abs_log_path
+Attachment: n_log_lines or full log from abs_log_path (see below)
 
 ## Write processes for monitoring to processes.json in the format [optional]:
 ```
@@ -26,15 +26,17 @@ Attachment: n_log_lines or full log from abs_log_path
 ## Change process_messenger_config.json parameters:
 ```
 {
-  "input": "processes.json", (file with processes, see above)
+  "input": "processes.json", (input file with processes, see above)
   "ssh": "username@host" or "host" or null, (ssh tunnling, null - not use)
   "mailing_list": ["local-part@domain", "local-part_2@domain"],
-  "n_log_lines": 10, (number of log last lines to email attachment)
-  "full_log": false (attach full log to email if exists)
+  "n_log_lines": 10, (number of last log lines to email attachment)
+  "full_log": false (attach full log to email if exists),
+  "sender": "local-part@domain"
 }
 ```
 
 ## Run
+## Note: script update input file (default: processes.json) with current processes states
 ```
 python process_messenger.py
 ```

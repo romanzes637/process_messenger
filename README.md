@@ -2,11 +2,11 @@
 Messaging processes states by email
 
 ## Mail format:
-Subject: Done_Host:host_Name:name_PID:pid
+Subject: Done_host:host_name:name_pid:pid
 
-Body: log_path:log_path (see below)
+Body: log_path:pid[log_path] (see below)
 
-Attachment: n_log_lines or full log from abs_log_path (see below)
+Attachment: n_log_lines or full log from log_path (see below)
 
 ## Write input file with processes for monitoring processes.json in the format [optional]:
 ```
@@ -14,7 +14,7 @@ Attachment: n_log_lines or full log from abs_log_path (see below)
   "pid" {
     ["status": 1 or 0,] (1 - running, 0 - done)
     ["name": "process name",]
-    ["abs_log_path": "process log absolute path"]
+    ["log_path": "process log absolute path"]
   },
   "pid_2 {
   },

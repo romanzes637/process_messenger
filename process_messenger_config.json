@@ -1,8 +1,8 @@
 {
   "input": "processes.json",
-  "ssh": "username@host",
-  "mailing_list": ["local-part@domain"],
-  "n_log_lines": 10,
+  "ssh": "ibrae-master",
+  "mailing_list": ["bra@ibrae.ac.ru"],
+  "n_log_lines": 50,
   "full_log": false,
-  "sender": "local-part@domain"
+  "sender": "bra@ibrae.ac.ru"
 }

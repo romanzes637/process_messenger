@@ -155,7 +155,8 @@ def main():
     print('Command Line Arguments:')
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--config', help='path to config json file', default='process_messenger_config.json')
-    parser.add_argument('-i', '--input', help='path to input json file')
+    parser.add_argument('input', help='path to input json file', nargs='?', default=None)
+    #parser.add_argument('-i', '--input', help='path to input json file')
     parser.add_argument('-p', '--pids', help='processes ids', nargs='+')
     parser.add_argument('-l', '--logs', help='processes logs paths', nargs='+')
     parser.add_argument('-n', '--names', help='processes names', nargs='+')
@@ -173,7 +174,7 @@ def main():
         result = check_file(config_args['input'])
         input_path = result['path']
     else:
-        print('-i key presented -> override config input')
+        print('-input presented -> override config input')
         result = check_file(args.input)
         input_path = result['path']
     print('Input: {0}'.format(input_path))
